@@ -1,0 +1,12 @@
+{
+  "name": "basic-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vanilla web calculator",
+  "scripts": {
+    "start": "serve . -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
