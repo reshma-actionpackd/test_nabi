@@ -163,6 +163,10 @@ body {
   grid-column: span 2;
 }
 
+.key--span-4 {
+  grid-column: span 4;
+}
+
 @media (max-width: 360px) {
   .display {
     font-size: 2.25rem;

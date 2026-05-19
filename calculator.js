@@ -134,6 +134,19 @@ function inputPercent() {
   updateDisplay();
 }
 
+function inputSqrt() {
+  if (state.error) return;
+
+  const value = parseFloat(state.displayValue);
+  if (!Number.isFinite(value) || value < 0) {
+    setError();
+    return;
+  }
+
+  state.displayValue = formatNumber(Math.sqrt(value));
+  updateDisplay();
+}
+
 function handleOperator(nextOperator) {
   if (state.error) return;
 
@@ -202,6 +215,9 @@ function handleAction(action, value) {
       break;
     case 'percent':
       inputPercent();
+      break;
+    case 'sqrt':
+      inputSqrt();
       break;
     default:
       break;
